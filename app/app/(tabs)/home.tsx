@@ -11,12 +11,6 @@ export default function Home() {
   return (
     <Screen>
       <View style={AppStyles.container}>
-        <Button
-          title="Go to profile"
-          onPress={() => {
-            router.navigate("/app/profile");
-          }}
-        />
         <Text style={AppStyles.heading}>Welcome to Home!</Text>
         <Button title="Sign Out" onPress={signOut} />
       </View>

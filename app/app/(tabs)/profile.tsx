@@ -10,12 +10,6 @@ export default function Profile() {
     <Screen>
       <View style={AppStyles.container}>
         <Text style={AppStyles.heading}>Profile Screen</Text>
-        <Button
-          title="Go to Home"
-          onPress={() => {
-            router.back();
-          }}
-        />
       </View>
     </Screen>
   );
