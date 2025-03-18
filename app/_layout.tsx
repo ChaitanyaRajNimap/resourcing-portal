@@ -1,5 +1,32 @@
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
+import { AuthProvider, useAuth } from "@/context/AuthContext";
+import { useEffect } from "react";
 
-export default function RootLayout() {
-  return <Stack />;
-}
+const RootLayout = () => {
+  return (
+    <AuthProvider>
+      <AuthRedirect />
+    </AuthProvider>
+  );
+};
+
+const AuthRedirect = () => {
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!loading) {
+        router.replace(user ? "/app/home" : "/auth/signin");
+      }
+    }, 500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [user, loading]);
+
+  return <Stack screenOptions={{ headerShown: false }} />;
+};
+
+export default RootLayout;

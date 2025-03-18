@@ -1,15 +1,12 @@
-import { Text, View } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
+import AppStyles from "@/utils/AppStyles";
+import Colors from "@/utils/Colors";
 
-export default function Index() {
+export default function SplashScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={AppStyles.container}>
+      <ActivityIndicator size="large" color={Colors.BLUE100} />
+      <Text>Loading...</Text>
     </View>
   );
 }
