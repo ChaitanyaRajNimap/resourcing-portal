@@ -1,5 +1,6 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
+import CustomDrawerContent from "@/components/CustomDrawerContent";
 import { StyleSheet } from "react-native";
 import AppStyles from "@/utils/AppStyles";
 import Colors from "@/utils/Colors";
@@ -11,40 +12,16 @@ export default function DrawerLayout() {
       <GestureHandlerRootView style={AppStyles.rootContainer}>
         <Drawer
           screenOptions={{
-            headerShown: true,
             headerStyle: styles.header,
             headerTintColor: Colors.BLUE100,
           }}
+          drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
           <Drawer.Screen
-            name="index"
+            name="masters/partner"
             options={{
-              drawerLabel: "Masters",
-              title: "Masters",
-            }}
-          />
-
-          <Drawer.Screen
-            name="setting"
-            options={{
-              drawerLabel: "Setting",
-              title: "Setting",
-            }}
-          />
-
-          <Drawer.Screen
-            name="process"
-            options={{
-              drawerLabel: "Process",
-              title: "Process",
-            }}
-          />
-
-          <Drawer.Screen
-            name="invoice"
-            options={{
-              drawerLabel: "Invoice",
-              title: "Invoice",
+              title: "Partner",
+              headerStyle: styles.header,
             }}
           />
         </Drawer>
