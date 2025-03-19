@@ -41,6 +41,7 @@ export default function SignIn() {
         ...prev,
         email: "Invalid email address",
       }));
+      setIsLoading(false);
       return;
     } else {
       setErrors((prev) => ({
@@ -54,6 +55,7 @@ export default function SignIn() {
         ...prev,
         password: "Invalid password",
       }));
+      setIsLoading(false);
       return;
     } else {
       setErrors((prev) => ({
