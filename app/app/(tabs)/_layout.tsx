@@ -10,10 +10,10 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors.BLUE100,
         tabBarInactiveTintColor: Colors.GREY100,
       }}
-      initialRouteName="home"
+      initialRouteName="dashboard"
     >
       <Tabs.Screen
-        name="explore"
+        name="(nav)"
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
@@ -23,7 +23,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="home"
+        name="dashboard"
         options={{
           title: "Dashboard",
           tabBarIcon: ({ color }) => (

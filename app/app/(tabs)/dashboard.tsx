@@ -4,14 +4,14 @@ import { useRouter } from "expo-router";
 import Screen from "@/components/Screen";
 import AppStyles from "@/utils/AppStyles";
 
-export default function Home() {
+export default function Dashboard() {
   const { signOut } = useAuth();
   const router = useRouter();
 
   return (
     <Screen>
       <View style={AppStyles.container}>
-        <Text style={AppStyles.heading}>Welcome to Home!</Text>
+        <Text style={AppStyles.heading}>Welcome to Dashboard!</Text>
         <Button title="Sign Out" onPress={signOut} />
       </View>
     </Screen>

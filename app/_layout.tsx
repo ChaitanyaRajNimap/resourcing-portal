@@ -17,7 +17,7 @@ const AuthRedirect = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!loading) {
-        router.replace(user ? "/app/(tabs)/home" : "/auth/signin");
+        router.replace(user ? "/app/(tabs)/dashboard" : "/auth/signin");
       }
     }, 500);
 
