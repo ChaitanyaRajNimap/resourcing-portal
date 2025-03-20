@@ -1,6 +1,7 @@
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import Colors from "@/utils/Colors";
+import ScaleSize from "@/utils/Scaling";
 
 export default function TabLayout() {
   return (
@@ -17,7 +18,7 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <MaterialIcons size={28} name="explore" color={color} />
+            <MaterialIcons size={ScaleSize(30)} name="explore" color={color} />
           ),
         }}
       />
@@ -27,7 +28,11 @@ export default function TabLayout() {
         options={{
           title: "Dashboard",
           tabBarIcon: ({ color }) => (
-            <MaterialIcons size={28} name="dashboard" color={color} />
+            <MaterialIcons
+              size={ScaleSize(30)}
+              name="dashboard"
+              color={color}
+            />
           ),
         }}
       />
@@ -37,7 +42,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="user" color={color} />
+            <FontAwesome size={ScaleSize(30)} name="user" color={color} />
           ),
         }}
       />
