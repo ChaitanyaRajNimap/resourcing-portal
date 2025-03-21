@@ -23,12 +23,12 @@ import {
 export default function Dashboard() {
   const { signOut } = useAuth();
   const router = useRouter();
-  const [topClients, setTopClients] = useState([]);
-  const [notes, setNotes] = useState([]);
-  const [resources, setResources] = useState([]);
-  const [resourceContractEnd, setResourceContractEnd] = useState([]);
-  const [purchaseOrderEnd, setPurchaseOrderEnd] = useState([]);
-  const [clientAgreementEnd, setClientAgreementEnd] = useState([]);
+  const [topClients, setTopClients] = useState<any>([]);
+  const [notes, setNotes] = useState<any>([]);
+  const [resources, setResources] = useState<any>([]);
+  const [resourceContractEnd, setResourceContractEnd] = useState<any>([]);
+  const [purchaseOrderEnd, setPurchaseOrderEnd] = useState<any>([]);
+  const [clientAgreementEnd, setClientAgreementEnd] = useState<any>([]);
 
   const topClientsData = [
     {
@@ -222,7 +222,7 @@ export default function Dashboard() {
     },
   ];
 
-  const renderClientItem = ({ item }) => {
+  const renderClientItem = ({ item }: any) => {
     return (
       <View style={styles?.clientRow}>
         <Text
@@ -244,7 +244,7 @@ export default function Dashboard() {
     );
   };
 
-  const renderNotesItem = ({ item }) => {
+  const renderNotesItem = ({ item }: any) => {
     return (
       <View style={styles.notesItem}>
         <View style={styles.notesItemTextContainer}>
@@ -279,7 +279,7 @@ export default function Dashboard() {
     );
   };
 
-  const renderResourceItem = ({ item }) => {
+  const renderResourceItem = ({ item }: any) => {
     return (
       <View style={styles.cardContainer}>
         <View style={styles.resourceCardRow}>
@@ -470,7 +470,7 @@ export default function Dashboard() {
     );
   };
 
-  const renderEndRecordItem = ({ item }) => {
+  const renderEndRecordItem = ({ item }: any) => {
     return (
       <View style={styles?.clientRow}>
         <Text
